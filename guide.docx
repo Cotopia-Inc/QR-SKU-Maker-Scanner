@@ -1,0 +1,267 @@
+Cotopia Partner & Distributor Guide
+Purpose
+- Audience: current and future distributors, resellers, VARs, platform owners, marketplace operators and business owners who will resell, integrate or embed the Cotopia QR & SKU Maker / Scanner app for their customers.
+- Goal: provide a practical, step‑by‑step playbook for onboarding, selling, integrating and supporting the app in compliance with the Distribution / Reseller Licensing and Partnership Agreement (the “Agreement”).
+
+Summary at a glance
+- Product: Cotopia — QR & SKU Maker / Scanner (single-file web app + support materials).  
+- Key partner fees (per Product Agreement): Admin / Enrollment Fee (one-time) + Continued License & Tech Support Fee (mandatory, 90‑day cadence).  
+  - Admin Fee (examples by Tier): Tier 1 = $349 | Tier 2 = $549 | Tier 3 = $749 | Tier 4 (white‑label) = $949 (or negotiated).  
+  - Continued License & Tech Support Fee: initial 90 days $79 (due at execution), then $149 every 90 days thereafter.  
+- Permitted reseller actions: market, resell, bundle, integrate, provide services consistent with Product Agreement and license grant. White‑label/OEM only if expressly approved in Product Agreement.
+- Included Tech Support: Distributor personnel only (not end customers), per Agreement.
+
+Guide contents (detailed)
+1) Commercial model & pricing — how distributors make money
+  - Fees you pay to Cotopia (Distributor costs)
+    - One-time Admin Fee (per Product Agreement / per Product): covers partner onboarding, portal, initial marketing kit, training.
+    - Continued License & Tech Support Fee: mandatory recurring fee paid every 90 days (initial $79 then $149 every 90 days).
+    - Recruited Distributor flow: Distributor may collect Admin Fee from downstream distributors and keep it; Distributor must remit recruited distributor’s initial $79 to Cotopia within 5 business days.
+  - Suggested reseller pricing strategies (examples)
+    - Direct Resell (simple markup)
+      - Cotopia list to Distributor (Tier 1 example): Admin $349 + initial $79 due = $428 first payment to Cotopia.
+      - Suggested Distributor retail price to end Customer for first 90 days: $799 (example). Recurring 90-day retail: $249.
+      - Gross margin example (first period): Retail $799 − (Distributor cost $428 + internal onboarding cost $100) = $271 gross margin.
+    - Subscription / SaaS Add-on (monthlyized view)
+      - Map Cotopia 90‑day cadence into monthly billing: initial $79 ≈ $26/mo (first 3 months), recurring $149/90 days ≈ $49.67/mo.
+      - Example retail monthly price to customers: $69/mo (billed monthly) or $199/90 days billed in sync with Cotopia. Margin example: $69 − $49.67 = $19.33/mo pre-support costs.
+    - Bundle + Service Upsell (recommended for VARs)
+      - Offer integration, CSV SKU onboarding, product photography, packaging templates, on-site training.
+      - Example bundle: App license + onboarding + small integration = $1,399 one-time + $299 per 90‑day support.
+      - Reason: professional services often yield higher margins.
+    - White‑label / OEM (Tier 4)
+      - If authorized, set wholesale price with Cotopia (negotiated). Add markup and integrate into your platform pricing.
+  - Examples for distributors recruiting downstream distributors
+    - Distributor collects Admin Fee $349, keeps it; must remit recruited distributor’s initial $79 to Cotopia in 5 business days.
+    - Distributor may charge recruited distributor a higher onboarding fee (e.g., $499) and keep difference as a finder fee, but must remit the $79.
+
+2) Tier selection & what each tier includes (how to pick)
+  - Tier 1 — Basic Reseller
+    - Price: Admin $349 + Continued License $79 initial, then $149/90 days.
+    - Best for: small resellers who resell “as‑is” without custom integrations or white‑labeling.
+    - Rights: resell, bundle with services, Distributor-only tech support.
+  - Tier 2 — VAR
+    - Price: Admin $549 + same continued license cadence.
+    - Best for: resellers delivering added services (integrations, training). Higher Admin justifies broader co‑branding and prioritized partner resources.
+  - Tier 3 — Admin / Full-Service Reseller
+    - Price: Admin $749 + same continued license cadence.
+    - Best for: resellers offering onboarding/managed services at scale — includes more training and partner manager access.
+  - Tier 4 — White‑label / OEM
+    - Price: Admin $949+ or negotiated.
+    - Best for: platform operators who want rebrand/own UX (requires explicit Product Agreement clause).
+  - Picking tip: start Tier 1 or 2; move up when you need co-brand materials, higher SLAs or white‑label rights.
+
+3) Onboarding checklist (step-by-step)
+  Pre-signing (sales)
+  - Identify Territory and Tier required for your market.
+  - Prepare corporate documents and unique company name (DBA may not include “Cotopia”).
+  - Choose support model for each Product Agreement: Distributor-as-Middleman (default) or Distributor-Handles-Direct.
+  - Provide Product Agreement contact and billing information.
+  Execution & initial payments
+  - Pay Admin Fee for chosen Tier to Cotopia; pay initial 90-day $79.
+  - If recruiting Recruited Distributor: collect Admin Fee (you may retain it) and remit recruited’s $79 + paperwork to Cotopia within five business days.
+  Post-execution provisioning
+  - Cotopia provides partner portal access, Documentation, marketing kit, onboarding training.
+  - Complete company-specific onboarding in 5 days (per Exhibit A) to receive provisioning/license keys.
+  Internal setup
+  - Assign authorized support contacts who will receive Included Tech Support.
+  - Train sales and technical staff on product features (see feature guide below).
+  - Decide pricing, packaging and go-to-market messaging.
+
+4) Operational responsibilities & compliance reminders
+  - Sales & Reporting: submit required sales and activity reports (monthly or quarterly as per Product Agreement).
+  - Taxes: you are responsible for VAT/GST/sales taxes on your invoices; Cotopia responsible for net income taxes.
+  - Brand use: Cotopia Marks may be used only after timely payments and per brand guidelines; do not use “Cotopia” in DBA.
+  - Support model compliance: follow elected support model; Cotopia provides Included Tech Support only to Distributor personnel unless otherwise stated.
+  - Data privacy & DPA: if handling personal data for customers, execute DPA per Exhibit E where required.
+
+5) Technical & product guide — app features, workflows and integration notes
+  High-level app functions (quick)
+  - Build tab: choose Mode (QR, SKU, QR+SKU), payload, embed file, SKU pattern, generate SKU, export PNG/SVG, prepare chunks and ZIP for large files.
+  - Customize tab: size, colors, logo, error correction, style, margin, top label.
+  - Scan tab: start camera scanner, upload images, detect QR, interpret manifests and SKUs.
+  - Supports embedding small files into QR (<= ~6KB data URL), otherwise generate manifest + ZIP package with file + qr.png + manifest.json and allow download.
+  - Chunking: create client-side chunked ZIP for large files for progressive uploads / staged delivery.
+  - CSV SKU import: upload CSV of SKUs (one SKU per line or column), pick/use SKUs from imported list.
+  - Templates: vCard, URL, JSON payload templates.
+  - Persistence: localStorage saves settings, logo, SKU list and last SKU.
+
+  Detailed feature walkthrough (for reseller training materials)
+  - Generating a QR with embedded small file
+    1. Build → choose Mode (e.g., both).
+    2. Paste payload or select template.
+    3. Attach file ≤6KB. App will base64 embed file into QR payload.
+    4. Customize → set colors, logo and margin; generate.
+    5. Export PNG/SVG or copy payload to use in systems.
+    - Integration note: embedding binary increases QR complexity; recommend using the manifest/ZIP flow for files >6KB.
+
+  - Generating manifest + downloadable package (recommended for distributors)
+    1. Attach large file in Build tab.
+    2. Generate: app will compute SHA‑256 and include manifest in QR payload.
+    3. Download package (ZIP) includes original file, qr.png and manifest.json.
+    4. For distribution: host ZIP on your server or provide direct download link in your invoicing/portal and use QR only for verifying manifest.
+    - Security/Trust: manifest contains SHA‑256 so customers can verify integrity of file after download.
+
+  - Chunking / progressive delivery (use case: large catalogs, offline devices)
+    1. Choose chunk size (default 262,144 bytes ≈ 256KB).
+    2. Click Prepare Chunks: client prepares part files (.part001, .part002…) and manifest.json and bundles as ZIP.
+    3. Upload parts to your storage or CDN; share download instructions with customers.
+    - Implementation tip: on the receiving side, provide a small script to reassemble parts and verify SHA‑256.
+
+  - CSV SKU import & workflow
+    1. Create CSV with a single column of SKUs (or SKUs in first column).
+    2. Import via CSV SKU Import control; app parses first column into the SKU list.
+    3. Use SKU list entries to populate SKU label region or cycle through SKUs when generating QR + SKU.
+    - Business usage: useful for distributors onboarding thousands of SKUs for customers (e.g., wholesalers, manufacturers).
+
+  - Integration patterns for marketplaces/platforms
+    - Option A — Embedded widget
+      - Add single-file HTML to a hosted location and embed via iframe on product pages.
+      - Use Product Agreement to give customers access; you control hosting, branding and access.
+    - Option B — API + Server packaging
+      - Use the client app to build QR + manifest, then server-side code generates final ZIP packages, stores on your server/CDN and populates product pages with download links.
+    - Option C — White‑label provisioning (Tier 4)
+      - With Product Agreement permissions, rebrand app and integrate into Admin dashboard; offer as part of SaaS subscription.
+
+6) Technical onboarding checklist (for your tech team)
+  - Confirm JavaScript dependencies are accessible (cdn.jsdelivr links included).
+  - Host single-file HTML on your secure web server (HTTPS required for camera access).
+  - Test camera scanning across target devices (iOS Safari, Android Chrome, desktop browsers).
+  - Implement server-side artifact hosting and SHA‑256 verification (manifest verification).
+  - Provide a script or microservice for reassembly of chunked files (if using chunking).
+  - Ensure CORS and content-disposition headers are correct when serving ZIPs.
+
+7) Go‑to‑market materials & recommended sales messaging
+  - Core value props for distributors to highlight:
+    - Fast, portable QR + SKU creation with SKU label band for printed packaging.
+    - Embed small product files directly in QR or provide secure manifest + downloadable package for larger files.
+    - Batch SKU import, CSV support and chunked file packaging for large catalogs.
+    - Camera-based scanning and verification experience for customers and field teams.
+    - Easy customization (colors, logos, label) for brand consistency.
+  - Suggested sales bundles & pricing examples
+    - Starter Pack (Target: small retailers)
+      - Offer: Annual subscription (billed every 90 days) + basic onboarding.
+      - Price example: $199 initial + $149 every 90 days. Includes 1-hour integration / training.
+    - VAR Pack (Target: resellers + integrators)
+      - Offer: License + 8 hours of integration + CSV onboarding + custom packaging.
+      - Price example: $1,399 one-time + $299 every 90 days for ongoing support.
+    - Enterprise Pack (Target: marketplaces / distributors)
+      - Offer: White‑label (if authorized), bulk SKU onboarding, custom integrations, SLA.
+      - Price example: negotiated (e.g., $5,000 onboarding + $999 every 90 days).
+  - Sales collateral suggestions
+    - One-page PDF “How it works” for customers (diagram: app → QR → scan → manifest verification).
+    - Case study showing time savings for a distributor who onboarded 10k SKUs (include metrics).
+    - FAQ for customers on manifest/ZIP verification and security.
+
+8) Support model & escalation (what distributor must provide vs Cotopia)
+  - Distributor-as-Middleman (default)
+    - Distributor provides first-line support to Customers.
+    - Distributor uses Included Tech Support for triage and escalations to Cotopia.
+    - Cotopia responds to Distributor support tickets per target SLA (acknowledgement targets).
+  - Distributor-Handles-Direct
+    - Distributor handles support, may not escalate unless a SOW authorizes customer-facing support from Cotopia.
+  - Recommended internal runbook for Distributor support
+    - Tier 1: common fixes (regenerate QR, re-upload logo, change colors, re-download package) — Distributor resolves.
+    - Tier 2: manifest mismatch, file packaging issues — gather logs, reproduce and escalate to Cotopia with sha256, sample file and reproduction steps.
+    - Tier 3: security or production incidents — immediate escalation to Cotopia per Exhibit B (follow emergency procedure).
+  - Recordkeeping & reporting
+    - Keep ticket logs, customers impacted, actions taken and remediations for audit.
+
+9) Legal & compliance checklist (must-dos)
+  - Use Cotopia Marks only per Agreement and brand guidelines; suspend use if fees unpaid.
+  - Do not alter product core code unless Agreement explicitly allows and sets terms.
+  - Maintain required insurance and follow export control rules.
+  - Remit recruited distributors’ initial $79 and paperwork in 5 business days where applicable.
+  - Ensure data protection compliance; execute DPA where processing personal data.
+  - Preserve Confidential Information and comply with audit obligations.
+
+10) Example customer scenarios — how distributors should sell & deliver
+  - Scenario A: Local distributor sells to small retail chain
+    - Pricing: Offer $799 for first 90 days + $249/90 days thereafter.
+    - Delivery: Host app on reseller site, provide CSV SKU onboarding, produce ZIP packages for large catalogs.
+    - Support: Distributor provides training and troubleshooting; escalate platform bugs to Cotopia.
+  - Scenario B: Marketplace integrates QR generator into seller dashboard
+    - Pricing: Marketplace bundles license into seller subscription, charges sellers $10/month extra.
+    - Delivery: White‑label integration (if authorized) or iframe embed; marketplace provides hosting and single-sign-on to sellers.
+    - Support: Marketplace handles seller support; escalations go to Cotopia for product bugs.
+  - Scenario C: Manufacturer distributes packaged product files to field agents
+    - Workflow: Manufacturer uses chunking to split big training videos, hosts parts on CDN; field app reassembles and verifies SHA‑256.
+    - Pricing: One-time license + professional services to implement reassembly.
+    - Support: Distributor/VAR provides reassembly utility and first-line support.
+
+11) Sample financial model (simple, per one Product Agreement)
+  - Assumptions:
+    - Tier 2 Admin Fee to Cotopia: $549 (Distributor pays).
+    - Continued License & Tech Fee: $79 initial, $149/90 days recurring.
+    - Distributor lists product at $799 first 90 days, $249 every 90 days after.
+    - Distributor charges $300 one-time onboarding services.
+  - First 90 days revenue & cost (per customer)
+    - Revenue: $799 (license) + $300 (services) = $1,099.
+    - Costs to Cotopia: $549 Admin + $79 initial = $628.
+    - Gross margin (90 days): $1,099 − $628 = $471 (before Distributor operational costs).
+  - Ongoing 90-day periods
+    - Revenue: $249 (license recurring).
+    - Cost: $149 (to Cotopia every 90 days).
+    - Gross margin per 90 days: $100 (before support and operations).
+  - Notes:
+    - Scale improves margins when amortizing onboarding costs.
+    - Upsell professional services (CSV import, integration) greatly increases the effective margin.
+
+12) Marketing & partner enablement assets (recommended)
+  - Required assets from Cotopia (to request)
+    - Partner portal access, logos, brand guidelines, product screenshots, templated one‑pagers, integration snippets, and sample manifests + verification scripts.
+  - Distributor-created assets (recommended)
+    - Landing page describing benefits and pricing plans.
+    - How-to video showing QR creation, embedding a file, chunking workflow and scanning.
+    - “Get started” kit: quick-start PDF + CSV template + reassembly script for chunked files.
+    - Email templates (onboarding, license renewal reminders, recruited distributor onboarding instructions).
+  - Co-marketing
+    - Coordinate with Cotopia for joint webinars, case studies, or partner listings (Company may list Distributor on partner page unless Distributor opts out).
+
+13) Operational examples & scripts (practical tips)
+  - Reassembly script outline (pseudo)
+    - Keep manifest.json with parts list + sha256.
+    - Download parts in order, append bytes, verify final SHA‑256 matches manifest.
+    - Offer a cross-platform small JS utility or CLI (Node) to reassemble parts for customers.
+  - Host ZIPs securely
+    - Set Content-Disposition to attachment; ensure HTTPS; set cache and CORS as appropriate.
+  - Automate documentation delivery
+    - After contract signing, send an onboarding packet with required items and a checklist.
+  - Verification tooling
+    - Provide customers a simple SHA‑256 checksum web tool to paste hex and verify file integrity (or include verification script in ZIP).
+
+14) Risks & mitigations (commercial and technical)
+  - Risk: Underpricing relative to recurring costs
+    - Mitigation: Ensure pricing covers recurring $149/90 days; map to monthly billing to see true cost.
+  - Risk: Improper use of Cotopia Marks / branding errors
+    - Mitigation: enforce internal brand use policy and require Cotopia approval for co-branded materials.
+  - Risk: Recruited Distributor nonpayment or paperwork delay
+    - Mitigation: collect Admin Fee and initial $79 at onboarding, remit within 5 business days, keep documentation.
+  - Risk: Customers expect direct Cotopia support
+    - Mitigation: clarify support model in customer agreements and on sales pages; offer paid white-glove support SOWs if needed.
+  - Risk: Large file distribution complexity
+    - Mitigation: use chunking & hosted packages; include manifest and verification steps; provide reassembly tool.
+
+15) Templates & documents you should maintain
+  - Sales quote template (showing first 90-day costs and ongoing cadence).
+  - Onboarding packet including Exhibit F (Recruited Distributor Onboarding & Remittance Form).
+  - Customer-facing Quick Start and Acceptable Use Policy (to manage expectations).
+  - Internal escalation matrix mapping Distributor tiers to Cotopia support contacts and severity levels.
+
+16) Next steps checklist (for a Distributor evaluating Cotopia)
+  - Decide Tier and support model; sign Product Agreement.
+  - Pay Admin Fee and initial Continued License Fee.
+  - Provision partner team (sales, tech, support).
+  - Host or embed the Cotopia app and test end-to-end (generate QR, embed file, large file manifest + ZIP, chunking + reassembly).
+  - Create pricing & bundle offers; prepare sales collateral and onboarding materials.
+  - Start pilot with one or two customers; measure cost-to-serve and refine pricing.
+  - Scale to larger customers and consider moving to a higher Tier if needed.
+
+Appendix — quick reference of fees & examples
+- Admin / Enrollment Fee: Tier 1 $349 | Tier 2 $549 | Tier 3 $749 | Tier 4 $949+ (one-time). Distributor may collect Admin Fee from Recruited Distributors and retain it (but must remit recruited’s $79).
+- Continued License & Tech Support Fee: initial $79 (due on execution), then $149 every 90 days (mandatory).
+- Example reseller retail first 90-day price: $799 (you set this). Ongoing 90-day price example: $249.
+- Example margins: first 90 days revenue $799 − cost $428 (Tier 1 example) = $371 gross before ops.
+
+Closing notes
+- This guide is operational and commercial: follow the Agreement for legal terms. For any requested contract changes (white‑label rights, different fee flows, bespoke SLAs), negotiate and record in the Product Agreement or an SOW.  
